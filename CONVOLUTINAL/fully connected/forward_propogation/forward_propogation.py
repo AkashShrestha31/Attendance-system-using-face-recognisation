@@ -8,5 +8,6 @@ def forward_propogation(A_prev,W,b,activation):
 		z=np.dot(A_prev,w)+b
 		cache=(A_prev,w,b)
 		A=sigm(Z)
-	return cache,A
+	cache_val=(cache,A)
+	return cache_val,A
 

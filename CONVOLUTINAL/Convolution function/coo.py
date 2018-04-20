@@ -6,7 +6,7 @@ import scipy.misc
 import matplotlib.pyplot as plt
 import cv2
 import csv
-obj=open("C:/Users/AK/Desktop/CONVOLUTINAL/color.csv", "r",)
+obj=open("C:/Users/AK/Desktop/attendance system using github/CONVOLUTINAL/color.csv", "r",)
 file=csv.reader(obj)
 np.random.seed(0)
 color=[]
@@ -39,7 +39,7 @@ def sliding(A_prev,stride,f,im):
 					else:
 						im=im+1
 					a_slice=cv2.cvtColor(a_slice, cv2.COLOR_BGR2RGB)
-					cv2.imwrite("C:/Users/AK/Desktop/CONVOLUTINAL/capture/capture"+str(im)+".jpg",a_slice)
+					cv2.imwrite("C:/Users/AK/Desktop/attendance system using github/CONVOLUTINAL/capture/capture"+str(im)+".jpg",a_slice)
 					# print("The slice is ",a_slice.shape)
 					# plt.imshow(a_slice)
 					# plt.show()
@@ -51,7 +51,7 @@ def sliding(A_prev,stride,f,im):
 	return im
 choose()
 print(color[4])
-path="C:/Users/AK/Desktop/CONVOLUTINAL/0.jpg"
+path="C:/Users/AK/Desktop/attendance system using github/CONVOLUTINAL/0.jpg"
 s=100
 f=150
 im=0
