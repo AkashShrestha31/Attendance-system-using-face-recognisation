@@ -8,6 +8,6 @@ def main_function():
 	parameters=initalize_parameter()
 	for i in range(25):
 		cache,A1=forward_popogation(X,parameters["W1"],parameters["b1"],"relu")
-		cache2,A2=forward_popogation(A1,parameters["W2"],parameters["b2"]."sigmoid")
+		cache2,A2=forward_popogation(A1,parameters["W2"],parameters["b2"],"sigmoid")
 
 main_function()

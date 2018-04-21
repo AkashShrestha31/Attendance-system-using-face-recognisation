@@ -13,8 +13,6 @@ color=[]
 def choose():
 	for line in file:
 		color.append([line[1],line[2],line[3]])
-
-
 def sliding(A_prev,stride,f,im):	
 	color_index=0
 	n_W,n_H,n_C=A_prev.shape
@@ -30,7 +28,6 @@ def sliding(A_prev,stride,f,im):
 					a_slice=A_prev[vert_start:vert_end,horiz_start:horiz_end,:]
 					if color_index>154:
 						color_index=0
-					
 					# cv2.rectangle(A_prev,(horiz_start,vert_start),(horiz_end,vert_end),(int(color[color_index][0]),int(color[color_index][1]),int(color[color_index][2])),1)
 					# print(horiz_start,vert_start,horiz_end,vert_end)
 					i_h,i_w,cha=a_slice.shape
